@@ -1,0 +1,558 @@
+@import"../scss/reset.scss";
+@import"../scss/UI-guildline.scss";
+
+
+body {
+    background-color: $Black100;
+    color: white;
+}
+
+/*----navigation-----*/
+
+
+/* ✋ .nav .landing-container 的寬度為什麼不能一起寫*/
+.nav {
+    max-width: 1298px;
+    /* ✋ .如果要再縮的時候保有padding 得設法？不然縮的時候都沒有邊界ＱＱ*/
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 0.5px solid white;
+
+    @media (max-width: 600px) {
+        margin: 12px;
+    }
+
+
+
+    .logo img {
+        width: 250px;
+
+        @media (max-width: 600px) {
+            width: 113px;
+        }
+    }
+
+    .menu {
+
+        ul {
+            li {
+                font-weight: bold;
+
+                a {
+                    color: white;
+                    text-decoration: none;
+
+                    &:hover {
+                        border-bottom: 1px solid white;
+                    }
+                }
+            }
+
+            display: flex;
+            gap: 20px;
+
+
+            @media (max-width: 600px) {
+                display: none;
+            }
+        }
+
+        .mobile-menu-icon {
+            display: none;
+
+
+            @media (max-width: 600px) {
+                display: block;
+            }
+        }
+
+    }
+
+}
+
+
+
+/*----landing-----*/
+
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1298px;
+    margin: auto;
+    padding: 40px 0px 160px 0px;
+
+    @media (max-width: 600px) {
+        margin: 12px;
+    }
+
+
+    .landing-headline {
+        padding: 0 0 40px 0;
+
+        h1 {
+            font-size: $Display02;
+            line-height: 1.125;
+            font-weight: bold;
+
+            @media (max-width: 600px) {
+                font-size: $Heading01;
+                letter-spacing: 2px;
+            }
+        }
+
+    }
+
+    .landing-animation {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+
+        @media (max-width: 600px) {
+            justify-content: center;
+            margin-top: 180px;
+
+        }
+
+        img {
+            @media (max-width: 600px) {
+                width: 117px;
+            }
+        }
+    }
+}
+
+/*----service-----*/
+
+.service-container {
+
+    display: flex;
+    max-width: 1298px;
+    margin: auto;
+    padding: 0 0 160px 0;
+    justify-content: space-between;
+
+    @media (max-width: 600px) {
+        margin: 12px;
+        flex-direction: column;
+        padding: 0 0 48px 0;
+    }
+
+    .service-title h3 {
+        flex-grow: 32%;
+        font-size: $Heading03;
+        font-weight: bold;
+
+        @media (max-width: 600px) {
+            font-size: $Heading06;
+            letter-spacing: 2px;
+        }
+    }
+
+    .service-par {
+        flex-grow: 66%;
+        justify-content: flex-end;
+        display: inline;
+        font-size: $Heading01;
+        line-height: 1.25;
+        font-weight: bold;
+
+        @media (max-width: 600px) {
+            font-size: $Heading03;
+            margin-top: 24px
+        }
+    }
+
+}
+
+/*----key-functions-----*/
+
+.key-fuctions-container {
+    margin: auto;
+    max-width: 1298px;
+    padding: 0 0 160px 0;
+    display: flex;
+    flex: 1;
+    gap: 24px;
+
+    @media (max-width: 1024px) {
+        margin: 12px;
+        flex-direction: column;
+        padding: 0 0 48px 0;
+    }
+
+
+
+}
+
+/*----partners-----*/
+
+.partners-container {
+    max-width: 1298px;
+    margin: auto;
+    padding: 0 0 160px 0;
+
+    @media (max-width: 600px) {
+        margin: 12px;
+        padding: 0 0 48px 0;
+    }
+
+
+    h3 {
+        font-size: $Heading03;
+        font-weight: bold;
+        margin-bottom: 80px;
+
+        @media (max-width: 600px) {
+            font-size: $Heading06;
+        }
+    }
+
+    .partners-logo {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 20px;
+
+        @media (max-width: 1024px) {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        @media (max-width: 600px) {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        img {
+            width: 160px;
+
+            @media (max-width: 1024px) {
+                width: 120px;
+            }
+
+
+            @media (max-width: 600px) {
+                width: 80px;
+            }
+        }
+
+    }
+}
+
+/*----recommend-----*/
+
+.recommend-container {
+    max-width: 1298px;
+    margin: auto;
+    padding: 0 0 160px 0;
+    display: flex;
+    gap: 24px;
+
+    @media (max-width: 600px) {
+        margin: 12px;
+        flex-direction: column;
+        padding: 0 0 48px 0;
+    }
+
+    .card2.no-show-600 {
+        display: block;
+
+        @media (max-width:600px) {
+            display: none;
+        }
+    }
+
+    .card2.no-show-1024 {
+        display: block;
+
+        @media (max-width: 1024px) {
+            display: none;
+        }
+    }
+
+
+}
+
+/*----application-----*/
+.app-container-stretch {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border-radius: 160px;
+
+    @media (max-width: 1024px) {
+        border-radius: 80px;
+    }
+
+
+    @media (max-width: 600px) {
+        border-radius: 20px;
+    }
+
+    .app-container {
+        max-width: 1298px;
+        margin: auto;
+        padding: 160px 0 160px 0;
+
+        @media (max-width: 600px) {
+            padding: 80px 0 80px 0;
+            margin: 12px;
+        }
+
+        .filter-chip-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+
+            @media (max-width: 600px) {
+                flex-direction: flex;
+                gap: 24px;
+                flex-wrap: wrap;
+
+            }
+        }
+
+
+
+
+        h1 {
+            font-size: $Display03;
+            color: $Black100;
+            font-weight: bold;
+            margin-bottom: 80px;
+            text-align: center;
+
+            @media (max-width: 1024px) {
+                font-size: $Heading01;
+                text-align: center;
+            }
+
+            @media (max-width: 600px) {
+                font-size: $Heading03;
+                text-align: center;
+            }
+        }
+
+        .search-bar {
+            margin-bottom: 24px;
+        }
+
+        .chip-container {
+            display: flex;
+            gap: 8px;
+            margin: auto;
+
+        }
+
+        .chip-container-web {
+            display: flex;
+
+            @media (max-width: 600px) {
+                display: none
+            }
+        }
+
+        .chip-container-mobile {
+            display: none;
+
+            @media (max-width: 600px) {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                width: 312px;
+            }
+        }
+    }
+
+    .app-cards-container {
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+        margin-bottom: 24px;
+        /* ✋ .1024px 的時候卡片變成兩格*/
+
+        @media (max-width: 600px) {
+            flex-direction: column;
+            gap: 24px;
+        }
+
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 16px;
+
+    @media (max-width: 600px) {
+        justify-content: center;
+        margin: 12px;
+
+    }
+
+    ul {
+        display: flex;
+
+        ul li {
+            display: flex
+        }
+
+    }
+}
+
+
+
+/*----CTA-----*/
+.CTA-container {
+    max-width: 1298px;
+    margin: auto;
+    padding: 160px 0 160px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    gap: 40px;
+
+
+    @media (max-width: 600px) {
+        justify-content: center;
+        padding: 120px 0 120px 0;
+        margin: 12px;
+
+    }
+
+
+    h1 {
+        font-size: $Heading01;
+        font-weight: bold;
+
+        @media (max-width: 600px) {
+            font-size: $Heading03;
+            text-align: center;
+        }
+    }
+}
+
+
+
+/*----Princing-----*/
+
+.pricing-container {
+    max-width: 1298px;
+    margin: auto;
+    padding: 80px 0 80px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+
+    @media (max-width: 600px) {
+        flex-direction: column-reverse;
+
+    }
+
+    .pricing-title h3 a {
+        font-size: $Display03;
+        font-weight: bold;
+        line-height: 1.3;
+        color: white;
+
+        @media (max-width: 600px) {
+            font-size: $Heading01;
+
+        }
+
+        &:hover {
+            color: $Black60;
+
+        }
+    }
+
+    img {
+        width: 250px;
+
+        @media (max-width: 600px) {
+            margin-bottom: 40px;
+        }
+
+
+    }
+
+}
+
+/*----footer-----*/
+.footer-container {
+    max-width: 1298px;
+    margin: auto;
+    padding: 32px 0 32px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+
+    @media (max-width: 600px) {
+        flex-direction: flex;
+        padding: 32px 0 32px 0;
+        margin: 12px;
+
+        justify-content: space-between;
+
+    }
+
+    .logotype-social-media {
+        display: flex;
+        gap: 24px;
+
+        @media (max-width: 600px) {
+            gap: 0px;
+            display: inline-flex;
+        }
+
+        .social-media {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+
+            @media (max-width: 600px) {
+                display: none;
+            }
+
+            a {
+                color: white;
+                font-weight: bold;
+
+            }
+
+        }
+    }
+
+    .primary-btn-icon {
+        display: inline;
+    }
+
+
+
+}
+
+.social-media-mobile {
+    display: none;
+
+    @media (max-width: 600px) {
+        margin: 12px;
+        display: flex;
+        gap: 24px;
+        justify-content: center;
+        margin-bottom: 20px;
+
+        a {
+            color: white;
+            font-weight: bold;
+
+        }
+    }
+}
