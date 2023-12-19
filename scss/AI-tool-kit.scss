@@ -118,7 +118,7 @@ body {
 
         img {
             @media (max-width: 600px) {
-                width: 117px;
+                width: 96px;
             }
         }
     }
@@ -453,6 +453,7 @@ body {
 
     @media (max-width: 600px) {
         flex-direction: column-reverse;
+        margin: 12px;
 
     }
 

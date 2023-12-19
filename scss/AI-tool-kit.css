@@ -535,7 +535,7 @@ body {
 }
 @media (max-width: 600px) {
   .landing-container .landing-animation img {
-    width: 117px;
+    width: 96px;
   }
 }
 
@@ -845,6 +845,7 @@ body {
 @media (max-width: 600px) {
   .pricing-container {
     flex-direction: column-reverse;
+    margin: 12px;
   }
 }
 .pricing-container .pricing-title h3 a {
